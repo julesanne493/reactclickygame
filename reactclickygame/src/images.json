@@ -11,8 +11,8 @@
     },
     {
       "id": 3,
-      "name": "Grey Cat",
-      "image": "https://i.imgur.com/AaXuUxC.jpg"
+      "name": "Frappuccino",
+      "image": "https://i.imgur.com/1BHvi8Q.jpg"
 
     },
     {
@@ -49,5 +49,15 @@
       "id": 10,
       "name": "Oyster Mushrooms",
       "image": "https://i.imgur.com/NMIZiGV.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Browsing Deer",
+      "image": "https://i.imgur.com/y6anRsZ.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Blueberry Pancakes",
+      "image": "https://i.imgur.com/a1mBL2r.jpg"
     }
   ]

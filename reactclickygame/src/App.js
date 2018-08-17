@@ -2,7 +2,6 @@ import React from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import ImageCard from "./components/ImageCard";
-//import images from "./images.json";
 
 const App = () => (
   <Wrapper>

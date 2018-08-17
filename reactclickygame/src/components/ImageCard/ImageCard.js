@@ -7,20 +7,28 @@ class ImageCard extends React.Component
   state = {
     images,
     score: 0,
-    keys: []
+    keys: [],
   }
 
   getImagesRand = () => {
-    for (let i = images.length-1; i>0; i--) {
-      const j = Math.floor(Math.random()* (i+1));
-      [images[i], images[j]] = [images[j], images[i]];
+    if (this.state.score === 11) {
+      alert ("You win! Click OK to play again.");
+      window.location.reload()
     }
-    return images
+
+    else {
+      for (let i = images.length-1; i>0; i--) {
+        const j = Math.floor(Math.random()* (i+1));
+        [images[i], images[j]] = [images[j], images[i]];
+      }
+      return images
+    }
   }
   
   clickHandler = event => {
     if (this.state.keys.includes(event.target.id)) {
-      alert("you lose")
+      alert("You lose :( Click OK to try again.")
+      window.location.reload()
     }
     
     else {
@@ -31,15 +39,15 @@ class ImageCard extends React.Component
       })
       this.getImagesRand();
     }
-    
-  
   }
+
 
   render () {
     return (
       <div>
-              <h2>Score: {this.state.score}</h2>
-            {this.state.images.map(image => (
+              <h2 id="scoreCard">Score: {this.state.score}</h2>
+              <div class="flex-container">
+                {this.state.images.map(image => (
               <div className="card" >
                 <div className="img-container">
                 <img src={image.image} name={image.name} id={image.id} 
@@ -48,7 +56,8 @@ class ImageCard extends React.Component
                 key={image._id}/>
                 </div>
                 </div>
-            ))}      
+            ))} 
+            </div>     
       </div>
     )
   }
