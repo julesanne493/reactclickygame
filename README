@@ -1,0 +1,13 @@
+#reactclicky game
+
+# How to Play
+Try and click all 12 images. If you click an image twice, you lose! Click all 12 with no repeats and you win. Good luck!
+
+# Functionality
+Built in ReactJS and deployed to GitHub Pages. 
+
+# Dependencies
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
